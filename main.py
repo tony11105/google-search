@@ -23,9 +23,8 @@ SEARCH_ENGINE_ID = ""
 
 def googleSearch(name):
     # the search query you want
-    # name = "sunny hy"
     # search key word
-    query = name + " National Taiwan University of Science and Technology linkedin"
+    query = name + "linkedin"
     # using the first page
     page = 1
     # constructing the URL
@@ -75,12 +74,12 @@ def googleSearch(name):
         return None
 
 if __name__ == '__main__':
-    studentName = readExcel()
+    name = readExcel()
     
     recodeArray = list()
-    for name in studentName:
-        if googleSearch(name) != None:
-            recodeArray.append(name)
+    for n in name:
+        if googleSearch(n) != None:
+            recodeArray.append(n)
 
     path = 'output.txt'
     with open(path, 'w') as f:
