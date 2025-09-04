@@ -14,9 +14,9 @@ def inputExcel():
 def readExcel():
     excelPath = inputExcel()
     df = pd.read_excel(excelPath)
-    studentName = df['姓名'].to_list()
+    name = df[''].to_list()
     
-    return studentName
+    return name
 
 API_KEY = ""
 SEARCH_ENGINE_ID = ""
@@ -24,7 +24,7 @@ SEARCH_ENGINE_ID = ""
 def googleSearch(name):
     # the search query you want
     # search key word
-    query = name + "linkedin"
+    query = name + ""
     # using the first page
     page = 1
     # constructing the URL
